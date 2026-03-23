@@ -1,0 +1,68 @@
+@use '../../../theme.scss' as *;
+
+.projects {
+    display: flex;
+    width: calc(100% / 3);
+    padding: 10px;
+    flex-direction: column;
+    background-color: var(--panel-color);
+    border: solid 1px var(--border-color);
+
+    h2 {
+        font-weight: 600;
+        margin-bottom: 16px;
+        color: var(--foreground-color);
+    }
+}
+
+.cardList {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    background-color: var(--panel-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 12px 16px;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--foreground-color);
+    transition: background-color 0.25s ease;
+
+    &:hover {
+        background-color: var(--border-color);
+    }
+}
+
+
+.info {
+    flex-grow: 1;
+
+    .title {
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 4px;
+    }
+
+    .maintenance {
+        font-size: 13px;
+        color: var(--foreground-color);
+
+        span {
+            font-weight: 600;
+            color: var(--error-color); // red color for the date to match your screenshot
+        }
+    }
+}
+
+.model {
+    font-size: 13px;
+    color: var(--foreground-color);
+    font-weight: 500;
+    white-space: nowrap;
+    margin-left: 12px;
+}

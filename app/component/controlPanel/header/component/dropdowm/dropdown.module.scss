@@ -1,0 +1,58 @@
+@use '../../../../../theme.scss';
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+  &__button {
+    padding: 8px 12px;
+    color: var(--foreground-color);
+    border: none;
+    cursor: pointer;
+  }
+
+  &__menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: var(--panel-color);
+    border: 1px solid var(--border-color);
+    min-width: 220px;
+    display: none;
+    flex-direction: column;
+    z-index: 10;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: solid 1px var(--border-color);
+    border-top: 0;
+
+    &.show {
+      display: flex;
+    }
+
+    span{
+        font-size: 14px;
+        float: left;
+    }
+  }
+
+  &__item {
+    padding: 10px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--side-menu-text-hover-color);
+    }
+  }
+}
+
+.icon {
+    float: right;
+    align-items: center;
+    margin-left: 5px;
+    margin-top: 6px;
+}
+
+.rotate {
+  transform: rotate(-180deg);
+}

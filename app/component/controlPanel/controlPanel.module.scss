@@ -1,0 +1,16 @@
+.main{
+    position: relative;
+    width: calc(100% - 250px);
+    margin-top: 80px;
+    margin-left: 250px;
+    transition: all 0.3s ease;
+
+    &.collapsed{
+        width: calc(100% - 80px);
+        margin-left: 80px;
+    }
+
+    &.full{
+        width: calc(100% - 250px);
+    }
+}
